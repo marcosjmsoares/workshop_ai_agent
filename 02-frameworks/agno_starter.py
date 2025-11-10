@@ -41,7 +41,7 @@ agent = Agent(
     name="Tech News Analyst",
     instructions=[INSTRUCTIONS],
     tools=[hackernews_tools],
-    show_tool_calls=True,
+    #show_tool_calls=True,
     model=Ollama(id="mistral:latest"),
     markdown=True,
     # memory=True,  # Enable memory for context retention

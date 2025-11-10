@@ -15,7 +15,7 @@ import os
 from typing import TypedDict, List
 from langgraph.graph import StateGraph, END
 from langchain_ollama import ChatOllama
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 
 
 # ============================================================================
