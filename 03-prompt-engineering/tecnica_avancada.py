@@ -11,7 +11,7 @@ INPUT ÚNICO: Análise de estratégia de marketing
 """
 
 from langchain_ollama import ChatOllama
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 import time
 import json
 

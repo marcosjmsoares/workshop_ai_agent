@@ -1,16 +1,6 @@
-slide: https://workshop-ai-agents-wh58xp5.gamma.site/
+https://workshop-ai-agents-wh58xp5.gamma.site/
 
--Configuração ambiente
-precisei instalar o ollama (4GB) e Visual C++ Build Tools localmente. 
-Instalar tb os requirements (pip install -r requirements.txt)
-poetry add "ag2[openai]"
-poetry add autogen
-poetry add ag2
-poetry add crewai
-poetry add litellm
-poetry add langgraph
-poetry add langchain-ollama
-
+aula 1
 
 começa minuto 12
 
@@ -27,4 +17,16 @@ minuto 40 =  explica sobre repositorio e requisitos
 minuto 50 = autogen
  "temperature": 0.7, #mais proximo de 0 deterministico, mais proximo de 1 criativo
 
+minuto 54= testando os  frameworks.
+
+minuto 1:33 = explicando sobre LLM
+
+precisei instalar o ollama (4GB) e Visual C++ Build Tools localmente. Instalar tb os requirements (pip install -r requirements.txt)
+
+
+------------------------------------------
+
+aula 2
+
+minuto 1 = executa pasta 03 e os arquivos tecnica_basica.py e tecnica_avancada.py
 
