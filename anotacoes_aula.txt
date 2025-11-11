@@ -1,8 +1,10 @@
 slide: https://workshop-ai-agents-wh58xp5.gamma.site/
 
 -Configuração ambiente
+sem API OPENAI nao vai funcionar os projetos
 precisei instalar o ollama (4GB) e Visual C++ Build Tools localmente. 
 Instalar tb os requirements (pip install -r requirements.txt)
+instalar nodejs (https://nodejs.org/pt/download) - executar export PATH="$PATH:/c/Program Files/nodejs"
 poetry add "ag2[openai]"
 poetry add autogen
 poetry add ag2
@@ -16,8 +18,17 @@ poetry add sentence-transformers
 poetry add python-dotenv
 poetry add crewai langchain-openai chromadb
 poetry add "chromadb>=1.1.0,<1.2.0"
+poetry add fastmcp
+poetry add langchain-mcp-adapters
+poetry add "crewai-tools[mcp]"
+poetry add "crewai[tools]"
+poetry run fastapi
+poetry add fastmcp@latest
+poetry add apscheduler
 
 
+
+https://workshop-ai-agents-wh58xp5.gamma.site/
 
 começa minuto 12
 
@@ -34,4 +45,30 @@ minuto 40 =  explica sobre repositorio e requisitos
 minuto 50 = autogen
  "temperature": 0.7, #mais proximo de 0 deterministico, mais proximo de 1 criativo
 
+minuto 54= testando os  frameworks.
+
+minuto 1:33 = explicando sobre LLM
+
+precisei instalar o ollama (4GB) e Visual C++ Build Tools localmente. Instalar tb os requirements (pip install -r requirements.txt)
+
+---------------------------------------------
+
+aula 02
+
+minuto 1 = executa pasta 03 e os arquivos tecnica_basica.py e tecnica_avancada.py
+
+minuto 12 = engenharia de prompt
+
+minuto 16 = explicando sobre RAG. RAG é uma Pipeline.
+ragplay.vercel.app/experiment
+
+minuto 43 = rodar os arquivos da pasta 04-rag para mostrar os exemplos.
+
+minuto 1:12 = pasta 05-memory para mostrar os exemplos.
+
+
+minuto 1:15 = mcp pasta 06-mcp
+
+
+minuto 1:38 = projeto final
 

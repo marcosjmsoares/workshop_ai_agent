@@ -4,9 +4,15 @@ from mcp import StdioServerParameters
 from langchain_openai import ChatOpenAI
 from fastmcp import FastMCP
 from dotenv import load_dotenv
+import os
+
 
 # Load env vars
 load_dotenv()
+
+if os.getenv("OPENAI_BASE_URL"):
+    os.environ["OPENAI_API_BASE"] = os.getenv("OPENAI_BASE_URL")
+    print(f"🔧 Using OpenAI-compatible API at: {os.getenv('OPENAI_BASE_URL')}")
 
 # Instantiate MCP server
 mcp = FastMCP("context7-agent-server")
@@ -28,18 +34,11 @@ async def context7_analyst_tool(question: str) -> str:
                 f"Available tools from Streamable HTTP MCP server: {[tool.name for tool in tools]}"
             )
 
-            # llm = LLM(
-            #     model="openai/gpt-4.1-mini",
-            #     temperature=0.3,
-            #     max_tokens=1000,
-            # )
-
             llm = LLM(
-            model="ollama/mistral",  # ou "ollama/llama3", etc
-            base_url="http://localhost:11434",
-            temperature=0.3,
-            max_tokens=1000,
-)
+                model="openai/gpt-4.1-mini",
+                temperature=0.3,
+                max_tokens=1000,
+            )
 
             context7_analyst = Agent(
                 role="Elite Documentation Intelligence Analyst",
